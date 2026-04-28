@@ -1,0 +1,78 @@
+body {
+    background: url(./vecteezy_loop-video-computer-binary-code-numbers-falling_36156625.mp4);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 6%;
+    text-align: center;
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.heading {
+    font-family: "Playfair Display SC", serif;
+    background-color: rgba(2, 2, 63, 0.623);
+    border-radius: 30%;
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 100px;
+    margin: 0;
+    font-style: italic;
+}
+
+.subheading {
+    font-family: "Gelasio", serif;
+    background-color: rgba(2, 2, 63, 0.548);
+    padding-top: 1%;
+    border-radius: 30%;
+    width: fit-content;
+    justify-self: center;
+    color: aliceblue;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+}
+
+label {
+    font-family: "Playfair Display SC", serif;
+    color: aliceblue;
+    font-weight: 100;
+    font-size: 20px;
+    padding-right: 1%;
+    align-self: center;
+    text-align: center;
+}
+
+.form-group {
+    margin: 1%;
+}
+
+input {
+    height: 30px;
+    font-family: "Gelasio", serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.btn {
+    font-family: "Playfair Display SC", serif;
+    font-size: 30px;
+    color:mediumblue;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(6, 33, 153);
+    color: aliceblue;
+}
