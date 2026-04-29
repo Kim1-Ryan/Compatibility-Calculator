@@ -76,3 +76,75 @@ input {
     background-color: rgb(6, 33, 153);
     color: aliceblue;
 }
+
+@media (max-width: 768px) {
+    .heading{
+        font-size: 55px;
+    }
+    .subheading {
+        font-size: 18px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input {
+        font-size: 11px;
+    }
+    .btn {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+   .heading{
+        font-size: 70px;
+    }
+    .subheading {
+        font-size: 20px;
+    }
+    label {
+        font-size: 16px;
+    }
+    input {
+        font-size: 13px;
+    }
+    .btn {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1600px) {
+   .heading{
+        font-size: 80px;
+    }
+    .subheading {
+        font-size: 22px;
+    }
+    label {
+        font-size: 18px;
+    }
+    input {
+        font-size: 15px;
+    }
+    .btn {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1601px) and (max-width: 1700px) {
+    .heading{
+        font-size: 90px;
+    }
+    .subheading {
+        font-size: 26px;
+    }
+    label {
+        font-size: 19px;
+    }
+    input {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+}
