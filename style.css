@@ -1,103 +1,105 @@
-/* --- Updated Base Styles --- */
+
 body {
-    background: #02023f; /* Fallback color */
+    background: url(./vecteezy_loop-video-computer-binary-code-numbers-falling_36156625.mp4);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Better than justify-self for body flex */
-    margin: 0;
-    padding: 20px;
+    justify-self: center;
+    margin: 6%;
     text-align: center;
-    min-height: 100vh;
 }
 
 #background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    object-fit: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .heading {
     font-family: "Playfair Display SC", serif;
     background-color: rgba(2, 2, 63, 0.623);
-    border-radius: 20px; /* Changed from % for better look on mobile */
+    border-radius: 30%;
     color: aliceblue;
     font-weight: 900;
-    font-size: 3rem; /* Use rem for better scaling */
-    margin: 10px 0;
+    font-size: 100px;
+    margin: 0;
     font-style: italic;
-    width: 100%;
-    max-width: 800px;
 }
 
 .subheading {
     font-family: "Gelasio", serif;
     background-color: rgba(2, 2, 63, 0.548);
-    padding: 15px;
-    border-radius: 15px;
-    width: 90%; /* Responsive width */
-    max-width: fit-content;
-    margin: 10px auto;
+    padding-top: 1%;
+    border-radius: 30%;
+    width: fit-content;
+    justify-self: center;
     color: aliceblue;
-    font-size: 1.2rem;
-}
-
-.form-group {
-    margin: 15px 0;
-    display: flex;
-    flex-direction: column; /* Stack label and input on mobile */
-    align-items: center;
-    width: 100%;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
 }
 
 label {
     font-family: "Playfair Display SC", serif;
     color: aliceblue;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: 20px;
+    padding-right: 1%;
+    align-self: center;
+    text-align: center;
+}
+
+.form-group {
+    margin: 1%;
 }
 
 input {
-    height: 44px; /* Minimum touch target height */
-    width: 80%;
-    max-width: 300px;
+    height: 30px;
     font-family: "Gelasio", serif;
-    font-size: 1rem;
+    font-size: 18px;
     text-align: center;
-    border-radius: 5px;
-    border: none;
 }
 
 .btn {
     font-family: "Playfair Display SC", serif;
-    font-size: 1.5rem;
-    color: mediumblue;
-    padding: 10px 30px;
-    min-height: 50px; /* Better for mobile tapping */
-    cursor: pointer;
-    border-radius: 10px;
+    font-size: 30px;
+    color:mediumblue;
+    text-align: center;
 }
 
-/* --- Mobile Specific Overrides --- */
-@media (max-width: 480px) {
+.btn:hover {
+    background-color: rgb(6, 33, 153);
+    color: aliceblue;
+}
+
+/* MOBILE (Only triggers on small screens) */
+@media (max-width: 600px) {
+    body {
+        margin: 2%; /* Reduce huge margins on small screens */
+    }
     .heading {
-        font-size: 2.2rem;
+        font-size: 45px; /* Stop the 100px text from breaking the layout */
+        border-radius: 15px; /* 30% border-radius looks weird on small boxes */
     }
     .subheading {
-        font-size: 1rem;
-        width: 100%;
+        font-size: 18px;
+        width: 95%; /* Ensure it doesn't overflow horizontally */
+        border-radius: 10px;
+        padding: 10px;
     }
-    .btn {
-        width: 100%; /* Full width button on very small screens */
+    .form-group {
+        display: flex;
+        flex-direction: column; /* Stack input under label for thumb-friendly use */
+        gap: 10px;
     }
-}
-
-/* --- Tablet/Desktop scaling --- */
-@media (min-width: 769px) {
-    .heading { font-size: 100px; }
-    .form-group { flex-direction: row; justify-content: center; }
-    .subheading { font-size: 30px; }
+    input, .btn {
+        height: 44px; /* Make them easier to tap with fingers */
+        font-size: 18px;
+    }
 }
