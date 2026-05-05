@@ -1,63 +1,62 @@
 
 body {
-    background: url(./vecteezy_loop-video-computer-binary-code-numbers-falling_36156625.mp4);
+    background: #02023f; /* Fallback */
     display: flex;
     flex-direction: column;
-    align-items: center; /* This centers the heading and content horizontally */
-    margin: 6%;
-    text-align: center;
+    align-items: center; /* Centers everything horizontally */
+    justify-content: center; /* Centers everything vertically */
+    margin: 0;
     min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #background-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  object-fit: cover;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .heading {
     font-family: "Playfair Display SC", serif;
     background-color: rgba(2, 2, 63, 0.623);
-    border-radius: 30%;
+    border-radius: 50px; 
     color: aliceblue;
     font-weight: 900;
-    font-size: 100px;
-    margin: 0;
-    padding: 20px;
+    font-size: 80px; /* Slightly smaller to prevent overflow */
+    margin: 0 0 20px 0;
+    padding: 20px 40px;
     font-style: italic;
-    width: fit-content; /* Helps with centering */
+    display: inline-block; /* Wraps background tightly around text */
 }
 
 .subheading {
     font-family: "Gelasio", serif;
     background-color: rgba(2, 2, 63, 0.548);
-    padding: 2%;
-    border-radius: 30%;
-    width: fit-content;
-    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
     color: aliceblue;
-    font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .form-group {
-    margin: 20px 0;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 15px; /* This creates the gap between the label and input box */
+    justify-content: center;
+    gap: 15px; /* Adds the gap before the input box */
 }
 
 label {
     font-family: "Playfair Display SC", serif;
     color: aliceblue;
-    font-weight: 100;
     font-size: 20px;
 }
 
@@ -66,14 +65,20 @@ input {
     font-family: "Gelasio", serif;
     font-size: 18px;
     text-align: center;
+    border-radius: 5px;
+    border: none;
 }
 
 .btn {
     font-family: "Playfair Display SC", serif;
-    font-size: 30px;
+    font-size: 28px;
     color: mediumblue;
-    padding: 5px 20px;
+    padding: 10px 30px;
     cursor: pointer;
+    background: aliceblue;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 80px; /* Reduced gap below button */
 }
 
 .btn:hover {
@@ -81,7 +86,6 @@ input {
     color: aliceblue;
 }
 
-/* Footer Style */
 footer {
     position: fixed;
     bottom: 0;
@@ -90,15 +94,21 @@ footer {
     padding: 15px 0;
     color: aliceblue;
     font-family: "Gelasio", serif;
-    background-color: rgba(0, 0, 0, 0.5); /* Slight background to see text over video */
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
 }
 
-/* MOBILE FIXES */
+/* MOBILE RESPONSIVE */
 @media (max-width: 600px) {
-    body { margin: 2%; padding-bottom: 60px; } /* Space for footer */
-    .heading { font-size: 45px; border-radius: 15px; }
-    .subheading { font-size: 18px; width: 90%; border-radius: 15px; }
-    .form-group { flex-direction: column; gap: 8px; }
-    input { width: 80%; height: 44px; }
-    .btn { height: 50px; width: 80%; font-size: 22px; }
+    .heading {
+        font-size: 40px;
+        padding: 15px;
+    }
+    .form-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+    input {
+        width: 80%;
+    }
 }
