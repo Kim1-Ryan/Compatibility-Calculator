@@ -3,9 +3,10 @@ body {
     background: url(./vecteezy_loop-video-computer-binary-code-numbers-falling_36156625.mp4);
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    align-items: center; /* This centers the heading and content horizontally */
     margin: 6%;
     text-align: center;
+    min-height: 100vh;
 }
 
 #background-video {
@@ -28,24 +29,29 @@ body {
     font-weight: 900;
     font-size: 100px;
     margin: 0;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
+    padding: 20px;
     font-style: italic;
+    width: fit-content; /* Helps with centering */
 }
 
 .subheading {
     font-family: "Gelasio", serif;
     background-color: rgba(2, 2, 63, 0.548);
-    padding-top: 1%;
+    padding: 2%;
     border-radius: 30%;
     width: fit-content;
-    justify-self: center;
+    margin: 20px auto;
     color: aliceblue;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-size: 30px;
-    font-style: normal;
+}
+
+.form-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* This creates the gap between the label and input box */
 }
 
 label {
@@ -53,17 +59,10 @@ label {
     color: aliceblue;
     font-weight: 100;
     font-size: 20px;
-    padding-right: 1%;
-    align-self: center;
-    text-align: center;
-}
-
-.form-group {
-    margin: 1%;
 }
 
 input {
-    height: 30px;
+    height: 35px;
     font-family: "Gelasio", serif;
     font-size: 18px;
     text-align: center;
@@ -72,8 +71,9 @@ input {
 .btn {
     font-family: "Playfair Display SC", serif;
     font-size: 30px;
-    color:mediumblue;
-    text-align: center;
+    color: mediumblue;
+    padding: 5px 20px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -81,28 +81,24 @@ input {
     color: aliceblue;
 }
 
-/* MOBILE (Only triggers on small screens) */
+/* Footer Style */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    color: aliceblue;
+    font-family: "Gelasio", serif;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight background to see text over video */
+}
+
+/* MOBILE FIXES */
 @media (max-width: 600px) {
-    body {
-        margin: 2%; /* Reduce huge margins on small screens */
-    }
-    .heading {
-        font-size: 45px; /* Stop the 100px text from breaking the layout */
-        border-radius: 15px; /* 30% border-radius looks weird on small boxes */
-    }
-    .subheading {
-        font-size: 18px;
-        width: 95%; /* Ensure it doesn't overflow horizontally */
-        border-radius: 10px;
-        padding: 10px;
-    }
-    .form-group {
-        display: flex;
-        flex-direction: column; /* Stack input under label for thumb-friendly use */
-        gap: 10px;
-    }
-    input, .btn {
-        height: 44px; /* Make them easier to tap with fingers */
-        font-size: 18px;
-    }
+    body { margin: 2%; padding-bottom: 60px; } /* Space for footer */
+    .heading { font-size: 45px; border-radius: 15px; }
+    .subheading { font-size: 18px; width: 90%; border-radius: 15px; }
+    .form-group { flex-direction: column; gap: 8px; }
+    input { width: 80%; height: 44px; }
+    .btn { height: 50px; width: 80%; font-size: 22px; }
 }
