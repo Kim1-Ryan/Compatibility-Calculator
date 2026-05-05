@@ -1,150 +1,103 @@
+/* --- Updated Base Styles --- */
 body {
-    background: url(./vecteezy_loop-video-computer-binary-code-numbers-falling_36156625.mp4);
+    background: #02023f; /* Fallback color */
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    margin: 6%;
+    align-items: center; /* Better than justify-self for body flex */
+    margin: 0;
+    padding: 20px;
     text-align: center;
+    min-height: 100vh;
 }
 
 #background-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  object-fit: cover;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .heading {
     font-family: "Playfair Display SC", serif;
     background-color: rgba(2, 2, 63, 0.623);
-    border-radius: 30%;
+    border-radius: 20px; /* Changed from % for better look on mobile */
     color: aliceblue;
     font-weight: 900;
-    font-size: 100px;
-    margin: 0;
+    font-size: 3rem; /* Use rem for better scaling */
+    margin: 10px 0;
     font-style: italic;
+    width: 100%;
+    max-width: 800px;
 }
 
 .subheading {
     font-family: "Gelasio", serif;
     background-color: rgba(2, 2, 63, 0.548);
-    padding-top: 1%;
-    border-radius: 30%;
-    width: fit-content;
-    justify-self: center;
+    padding: 15px;
+    border-radius: 15px;
+    width: 90%; /* Responsive width */
+    max-width: fit-content;
+    margin: 10px auto;
     color: aliceblue;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-size: 30px;
-    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column; /* Stack label and input on mobile */
+    align-items: center;
+    width: 100%;
 }
 
 label {
     font-family: "Playfair Display SC", serif;
     color: aliceblue;
-    font-weight: 100;
-    font-size: 20px;
-    padding-right: 1%;
-    align-self: center;
-    text-align: center;
-}
-
-.form-group {
-    margin: 1%;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
 }
 
 input {
-    height: 30px;
+    height: 44px; /* Minimum touch target height */
+    width: 80%;
+    max-width: 300px;
     font-family: "Gelasio", serif;
-    font-size: 18px;
+    font-size: 1rem;
     text-align: center;
+    border-radius: 5px;
+    border: none;
 }
 
 .btn {
     font-family: "Playfair Display SC", serif;
-    font-size: 30px;
-    color:mediumblue;
-    text-align: center;
+    font-size: 1.5rem;
+    color: mediumblue;
+    padding: 10px 30px;
+    min-height: 50px; /* Better for mobile tapping */
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.btn:hover {
-    background-color: rgb(6, 33, 153);
-    color: aliceblue;
-}
-
-@media (max-width: 768px) {
-    .heading{
-        font-size: 55px;
+/* --- Mobile Specific Overrides --- */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2.2rem;
     }
     .subheading {
-        font-size: 18px;
-    }
-    label {
-        font-size: 14px;
-    }
-    input {
-        font-size: 11px;
+        font-size: 1rem;
+        width: 100%;
     }
     .btn {
-        font-size: 11px;
+        width: 100%; /* Full width button on very small screens */
     }
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-   .heading{
-        font-size: 70px;
-    }
-    .subheading {
-        font-size: 20px;
-    }
-    label {
-        font-size: 16px;
-    }
-    input {
-        font-size: 13px;
-    }
-    .btn {
-        font-size: 13px;
-    }
-}
-
-@media (min-width: 993px) and (max-width: 1600px) {
-   .heading{
-        font-size: 80px;
-    }
-    .subheading {
-        font-size: 22px;
-    }
-    label {
-        font-size: 18px;
-    }
-    input {
-        font-size: 15px;
-    }
-    .btn {
-        font-size: 15px;
-    }
-}
-
-@media (min-width: 1601px) and (max-width: 1700px) {
-    .heading{
-        font-size: 90px;
-    }
-    .subheading {
-        font-size: 26px;
-    }
-    label {
-        font-size: 19px;
-    }
-    input {
-        font-size: 16px;
-    }
-    .btn {
-        font-size: 16px;
-    }
+/* --- Tablet/Desktop scaling --- */
+@media (min-width: 769px) {
+    .heading { font-size: 100px; }
+    .form-group { flex-direction: row; justify-content: center; }
+    .subheading { font-size: 30px; }
 }
